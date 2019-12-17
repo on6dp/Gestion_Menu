@@ -1,0 +1,19 @@
+[Unit]
+Description=Analog_Bridge Service
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+StandardOutput=null
+WorkingDirectory=/opt/Analog_Bridge
+Environment=AnalogBridgeLogDir=/ramdisk
+Restart=always
+RestartSec=3
+ExecStart=/opt/Analog_Bridge/Analog_Bridge /opt/Analog_Bridge/Analog_Bridge.ini
+ExecReload=/bin/kill -2 $MAINPID
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+

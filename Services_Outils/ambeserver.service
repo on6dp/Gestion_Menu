@@ -1,0 +1,18 @@
+[Unit]
+Description=AMBEserver Service
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+StandardOutput=null
+WorkingDirectory=/usr/bin
+Restart=always
+RestartSec=3
+ExecStart=/etc/init.d/AMBEserver start
+ExecStop=/etc/init.d/AMBEserver stop
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+

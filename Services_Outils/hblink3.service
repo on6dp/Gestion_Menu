@@ -1,0 +1,14 @@
+[Unit]
+Description=HBlink3 Service
+After=network-online.target syslog.target
+Wants=network-online.target
+
+[Service]
+StandardOutput=null
+WorkingDirectory=/opt/hblink3
+RestartSec=3
+ExecStart=/usr/bin/python3 /opt/hblink3/bridge.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

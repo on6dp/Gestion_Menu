@@ -1,0 +1,18 @@
+[Unit]
+Description=YSFGateway Service
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+StandardOutput=null
+WorkingDirectory=/opt/YSFGateway
+Restart=always
+RestartSec=3
+ExecStart=/opt/YSFGateway/YSFGateway /opt/YSFGateway.ini
+ExecReload=/bin/kill -2 $MAINPID
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+

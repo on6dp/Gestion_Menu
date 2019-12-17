@@ -1,0 +1,8 @@
+# P25Hosts.txt
+#=============
+#
+# Creation prive F1PTL bruno
+#+++++++++++++++++++++++++++
+#
+# 10208 P25-France-Test
+10208 m55.evxonline.net 41000

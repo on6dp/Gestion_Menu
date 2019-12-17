@@ -1,0 +1,8 @@
+# P25Hosts.txt
+#=============
+#
+# Creation prive F1PTL bruno
+#+++++++++++++++++++++++++++
+#
+# 65302 NXDN Canada France
+65302	74.210.134.214	41400

@@ -1,0 +1,14 @@
+[Unit]
+Description=IRCDDBGateway Service
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+StandardOutput=null
+WorkingDirectory=/usr/bin
+RestartSec=3
+ExecStart=/usr/bin/ircddbgatewayd
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
