@@ -1,5 +1,5 @@
 [Unit]
-Description=Analog_Bridge Service
+Description=MMDVM_Bridge Service
 After=network-online.target syslog.target netcheck.service
 Wants=network-online.target
 
