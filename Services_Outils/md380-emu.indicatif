@@ -1,0 +1,17 @@
+[Unit]
+Description=MD-380_TXG Emulator Service
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+StandardOutput=null
+WorkingDirectory=/opt/md380-emu_indicatif
+ExecStart=/opt/md380-emu_indicatif/md380-emu -S 24TXG
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

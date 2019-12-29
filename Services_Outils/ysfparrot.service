@@ -1,0 +1,18 @@
+[Unit]
+Description=YSFParrot Service
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+StandardOutput=null
+WorkingDirectory=/opt/YSFParrot
+Restart=always
+RestartSec=3
+ExecStart=/opt/YSFParrot/YSFParrot 42012
+ExecReload=/bin/kill -2 $MAINPID
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+

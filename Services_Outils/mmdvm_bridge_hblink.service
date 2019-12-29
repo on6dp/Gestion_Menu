@@ -1,0 +1,18 @@
+[Unit]
+Description=MMDVM_Bridge HBlink Service
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+StandardOutput=null
+WorkingDirectory=/opt/MMDVM_Bridge
+Restart=always
+RestartSec=3
+ExecStart=/opt/MMDVM_Bridge/MMDVM_Bridge /opt/MMDVM_Bridge/MMDVM_Bridge_HBlink.ini
+ExecReload=/bin/kill -2 $MAINPID
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
