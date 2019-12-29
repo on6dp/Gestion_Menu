@@ -1,0 +1,35 @@
+; dvsm.macro
+; This is a macro include file for Analog_Bridge(AB)
+; The purpose of this file is to provide macro commands for use by DVSwitch Mobile(DVSM)
+; These macros execute scripts when a DVSM user requests a mode change.
+
+
+[MACROS]
+; Example: When a DVSM user selects the DMR mode, AB will look for the mode below and execute the script and pass the parameter.
+; In this case, AB will execute the script "/opt/Analog_Bridge/dvswitch.sh" and pass the prarmeters of "mode DMR" to the script. 
+
+DMR =   /opt/Analog_Bridge_indicatif/dvswitch.sh mode DMR
+DSTAR = /opt/Analog_Bridge_indicatif/dvswitch.sh mode DSTAR
+NXDN =  /opt/Analog_Bridge_indicatif/dvswitch.sh mode NXDN
+P25 =   /opt/Analog_Bridge_indicatif/dvswitch.sh mode P25
+YSF =   /opt/Analog_Bridge_indicatif/dvswitch.sh mode YSF
+
+; Ask AB to pull fresh data files and send to DVSM/UC
+dbupdate = /opt/Analog_Bridge_indicatif/dvswitch.sh collectProcessPushDataFiles
+
+; Example TG / Reflector Macro
+9876 =  /opt/Analog_Bridge_indicatif/parrot.sh
+
+; Ajout F1PTL Redemarrage du RaspBerry
+6666 = sudo reboot
+
+; Ajout F1PTL VW et DN en YSF
+AB10 = /opt/Analog_Bridge_indicatif/dvswitch.sh ambemode YSFW
+AB20 = /opt/Analog_Bridge_indicatif/dvswitch.sh ambemode YSFN
+
+; Ajout F1PTL Bascule BM vers HBlink3
+9200 = /opt/Analog_Bridge_indicatif/dvs_bm_hblink.sh
+9201 = /opt/Analog_Bridge_indicatif/dvs_hblink_bm.sh
+
+; Ajout F1PTL Affichage Connexion
+9500 = /opt/Analog_Bridge_indicatif/dvs_info.sh
