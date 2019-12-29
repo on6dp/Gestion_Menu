@@ -3,7 +3,7 @@
 #===================================
 # Creation le 26/12/2019
 # Par F1PTL Bruno
-# Version 1.4
+# Version 1.5
 #===================================
 #####################################
 # Variables #
@@ -20,7 +20,7 @@ if [ $(id -u) -ne 0 ]
 fi
 
 while : ; do
-OPTION=$(whiptail --title "F1PTL Gestion_Menu Version 1.4" --menu " Votre choix ?" 20 50 8 \
+OPTION=$(whiptail --title "F1PTL Gestion_Menu Version 1.5" --menu " Votre choix ?" 20 50 8 \
 1 "Installation DVSwitch Server" \
 2 "Modification DVSwitch Server" \
 3 "Service DVSwitch Server" \
