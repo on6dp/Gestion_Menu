@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 19/12/2019
+# Creation le 03/12/2019
 # Par F1PTL Bruno
 # Version 1.0
 #===================================
@@ -10,7 +10,7 @@
 #############
 REP_COURANT=`pwd`
 FIC_REF="Fichiers_Ini_Ref"
-FIC_REF_TAR="Fichiers_Ini_Ref_V1.1.tar"
+FIC_REF_TAR="Fichiers_Ini_Ref_V1.tar"
 HB_DEPOT="HB_Depot"
 #####################################
 if [ $(id -u) -ne 0 ]
