@@ -3,7 +3,7 @@
 #===================================
 # Creation le 30/12/2019
 # Par F1PTL Bruno
-# Version 3.12
+# Version 3.13
 #===================================
 #####################################
 # Variables #
@@ -21,7 +21,7 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-if (whiptail --title "F1PTL MENU Version 3.12" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
+if (whiptail --title "F1PTL MENU Version 3.13" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
     	echo "==> vous avez valider votre choix"
 	else
     	echo "==> vous avez annule"; exit 1
@@ -329,6 +329,8 @@ echo "==> Mise en place des services outils"
 echo "#####################################"
 cp -rf $REP_COURANT/${SER_OUTIL}/*.service /lib/systemd/system
 echo "cp -rf $REP_COURANT/${SER_OUTIL}/*.service /lib/systemd/system"
+cp -rf $REP_COURANT/${SER_OUTIL}/dvs_*.sh /opt/Analog_Bridge
+echo "cp -rf $REP_COURANT/${SER_OUTIL}/dvs_*.sh /opt/Analog_Bridge"
 systemctl daemon-reload
 cd $REP_COURANT/${SER_OUTIL}
 systemctl enable *.service
@@ -373,8 +375,6 @@ cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/Analog_Bridge.ini /opt/Analog_Bridge
 echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/Analog_Bridge.ini /opt/Analog_Bridge"
 cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvsm.macro /opt/Analog_Bridge
 echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvsm.macro /opt/Analog_Bridge"
-cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvs_*.sh /opt/Analog_Bridge
-echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvs_*.sh /opt/Analog_Bridge"
 cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/DVSwitch.ini /opt/MMDVM_Bridge
 echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/DVSwitch.ini /opt/MMDVM_Bridge"
 cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/MMDVM_Bridge.ini /opt/MMDVM_Bridge
