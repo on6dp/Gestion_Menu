@@ -41,6 +41,7 @@ echo "============================================================="
 sleep 3
 systemctl daemon-reload
 
+echo ""
 echo "###################################"
 echo "==> Arret des services ${INDICATIF}"
 echo "###################################"
@@ -53,19 +54,19 @@ sudo systemctl disable md380-emu_${INDICATIF}.service
 sudo systemctl disable analog_bridge_${INDICATIF}.service
 sudo systemctl disable mmdvm_bridge_${INDICATIF}.service
 
-
+echo ""
 echo "#######################################"
 echo "==> Recherche des repertoires dans /opt"
 echo "#######################################"
 sudo find /opt -name "*${INDICATIF}*" -exec rm -rf {} \; > /dev/null 2>&1
 
-
+echo ""
 echo "#########################################################"
 echo "==> Recherche des repertoires dans ${REP_COURANT}"
 echo "#########################################################"
 sudo find ${REP_COURANT} -name "*${INDICATIF}*" -exec rm -rf {} \; > /dev/null 2>&1
 
-
+echo ""
 echo "######################################################"
 echo "==> Recherche des repertoires dans /lib/systemd/system"
 echo "######################################################"
