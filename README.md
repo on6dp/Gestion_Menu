@@ -6,6 +6,10 @@ Ajout Multi Users maximum 6 pour un bon fonctionnement du RaspBerry PI. Autorisa
 
 Prendre la documentation qui se trouve dans la repository "Documentations"
 
-Se connecter avec les droits "root" puis lancer la commande "# ./Menu_V1.5.sh"
+Se connecter avec les droits "root" puis lancer la commande suivante.
+Se positionner dans le repertoire /home/<utilisateur>
+$ git clone <url.....>
+$ chmod 755 *.sh
+$ sudo  ./Menu_V1.5.sh
 
 Dans un premier temps on lance l'installation du DVSwitch Server.
