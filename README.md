@@ -8,3 +8,4 @@ Prendre la documentation qui se trouve dans la repository "Documentations"
 
 Se connecter avec les droits "root" puis lancer la commande "# ./Menu_V1.5.sh"
 
+Dans un premier temps on lance l'installation du DVSwitch Server.
