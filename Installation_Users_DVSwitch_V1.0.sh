@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 29/12/2019
+# Creation le 30/12/2019
 # Par F1PTL Bruno
 #===================================
 #####################################
@@ -21,44 +21,48 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-if (whiptail --title "F1PTL MENU Installation Users DVSwitch Version ${Version}" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Nouveau indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
+if (whiptail --title "F1PTL MENU Installation Users DVSwitch Version ${Version}" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Autorisation sur le DMR et le C4FM (YSF).\n\n      Indicatif, ID-DMR, ID-NXDN, port USRP..." 10 78); then
     	echo "==> vous avez valider votre choix"
 	else
     	echo "==> vous avez annule"; exit 1
 fi
 
 
-INDICATIF=$(whiptail --title "Input" --inputbox "Quel est le nouveau indicatif ?" 10 60 FXXXX 3>&1 1>&2 2>&3)
+INDICATIF=$(whiptail --title "Input" --inputbox "Quel est l indicatif ?" 8 60 FXXXX 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
 
-IDDMR7=$(whiptail --title "Input" --inputbox "Quel est l ID-DMR 7 digits ?" 10 60 208XXXX 3>&1 1>&2 2>&3)
+IDDMR7=$(whiptail --title "Input" --inputbox "Quel est l ID-DMR 7 digits ?" 8 60 208XXXX 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
 
-IDDMR9=$(whiptail --title "Input" --inputbox "Quel est l ID-DMR 9 digits ? \n (Modifier les 2 derniers digits)" 10 60 ${IDDMR7}01 3>&1 1>&2 2>&3)
+IDDMR9=$(whiptail --title "Input" --inputbox "Quel est l ID-DMR 9 digits ? \n (Modifier les 2 derniers digits)" 8 60 ${IDDMR7}01 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
 
-IDNXDN=$(whiptail --title "Input" --inputbox "Quel est l ID-NXDN ? \n (Pas d ID-NXDN prendre 9999)" 10 60 9999 3>&1 1>&2 2>&3)
+IDNXDN=$(whiptail --title "Input" --inputbox "Quel est l ID-NXDN ? \n (Pas d ID-NXDN prendre 9999)" 8 60 9999 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
 
-USRP=$(whiptail --title "Input" --inputbox "Quel est le port USRP ? \n (Valeur a positionner dans votre SmartPhone)" 10 60 51234 3>&1 1>&2 2>&3)
+USRP=$(whiptail --title "Input" --inputbox "Quel est le port USRP ? \n (Valeur a positionner dans votre SmartPhone)" 8 60 51234 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
 
-TXG=$(whiptail --title "Input" --inputbox "Quel est le numero d installation ? \n (Valeur a mettre entre 20 et 30)" 10 60 20 3>&1 1>&2 2>&3)
+VALEUR="20"
+VALEUR_TXG=`ps -edf | awk '/md380-emu \-S 242/ {print $11}' | cut -c3-4 | tail -1`
+VALEUR=`expr ${VALEUR_TXG} + 1`
+
+TXG=$(whiptail --title "Input" --inputbox "Quel est le numero d installation ? \n (Selectionner entre 20 et 29),\n\n Le numero conseille est le : ${VALEUR}" 10 60 ${VALEUR} 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
@@ -89,6 +93,9 @@ fi
 
 if [ -d "${REP_COURANT}/${FIC_REF}_${INDICATIF}" ]
         then
+        echo ""
+	echo "ATTENTION :"
+	echo "==========="
         echo ""
         echo "==> Le repertoire Fichiers_Ini_Ref_${INDICATIF} existe !"
         echo "==> Impossible de poursuivre l installation."
