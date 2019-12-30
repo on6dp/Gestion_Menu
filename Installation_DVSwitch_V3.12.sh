@@ -10,9 +10,9 @@
 #############
 REP_COURANT=`pwd`
 FIC_REF="Fichiers_Ini_Ref"
-FIC_REF_TAR="Fichiers_Ini_Ref_V1.1.tar"
+FIC_REF_TAR="Fichiers_Ini_Ref_V1.3.tar"
 SER_OUTIL="Services_Outils"
-SER_OUTIL_TAR="Services_Outils_V1.1.tar"
+SER_OUTIL_TAR="Services_Outils_V1.3.tar"
 #####################################
 if [ $(id -u) -ne 0 ]
         then
