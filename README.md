@@ -8,9 +8,9 @@ Prendre la documentation qui se trouve dans la repository "Documentations"
 
 Se connecter avec les droits "root".
 
-Se positionner dans le repertoire cd /home/<utilisateur>
+Se positionner dans le repertoire cd /home/utilisateur
   
-$ git clone <url.....>
+$ git clone url.....
 
 $ chmod 755 *.sh
 
