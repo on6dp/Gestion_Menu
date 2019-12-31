@@ -10,13 +10,13 @@ Se connecter avec les droits "root".
 
 Se positionner dans le repertoire cd /home/utilisateur
 
-$ apt install git -y
+$ sudo apt install git -y
   
-$ git clone url.....
+$ sudo git clone url.....
 
-$ chmod 755 *.sh
+$ sudo chmod 755 *.sh
 
-$ sudo  ./Menu_V1.5.sh
+$ sudo ./Menu_V1.5.sh
 
 Dans un premier temps on lance l'installation du DVSwitch Server.
 
