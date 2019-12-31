@@ -58,7 +58,7 @@ if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
 
-VALEUR_TXG=`ps -edf | awk '/md380-emu \-S 242/ {print $10}' | cut -c3-4 | tail -1`
+VALEUR_TXG=`ps -edf | awk '/md380-emu \-S 242/ {print $10}' | cut -c3-4 | sort | tail -1`
 if [ "${VALEUR_TXG}NUM" = "NUM" ]; then
 	VALEUR="20"
 	else
