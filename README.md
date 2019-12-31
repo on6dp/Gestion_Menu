@@ -9,6 +9,8 @@ Prendre la documentation qui se trouve dans la repository "Documentations"
 Se connecter avec les droits "root".
 
 Se positionner dans le repertoire cd /home/utilisateur
+
+$ apt install git -y
   
 $ git clone url.....
 
