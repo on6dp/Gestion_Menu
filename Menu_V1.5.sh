@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #===================================
-# Creation le 26/12/2019
+# Creation le 31/12/2019
 # Par F1PTL Bruno
 #===================================
 #####################################
@@ -38,7 +38,7 @@ if [ $exitstatus != 0 ]; then
 fi
 
 case $OPTION in
-1) ${REP_COURANT}/Installation_DVSwitch_V3.12.sh ;;
+1) ${REP_COURANT}/Installation_DVSwitch_V3.13.sh ;;
 2) ${REP_COURANT}/Modification_DVSwitch_V1.0.sh ;;
 3) ${REP_COURANT}/Service_DVSwitch_V1.1.sh ;;
 4) ${REP_COURANT}/Log_DVSwitch_V1.0.sh ;;
