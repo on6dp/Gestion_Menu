@@ -20,7 +20,7 @@ $ sudo ./Menu_V1.5.sh
 
 Dans un premier temps on lance l'installation du DVSwitch Server.
 
-Si vous avez besoin d'une 2eme installation (Indicatif) prendre "Installation Users DVSwitch Server".
+Si vous avez besoin de mettre en place un 2eme indicatif, prendre "Installation Users DVSwitch Server".
 
 73's
 Bruno
