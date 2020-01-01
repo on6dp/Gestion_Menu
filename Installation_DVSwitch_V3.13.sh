@@ -147,18 +147,6 @@ apt-get install build-essential -y
 apt-get install dos2unix -y
 apt-get install htop -y
 
-# apt-get install lighttpd -y
-# apt-get install php-cgi -y
-
-# chown -R www-data:www-data /var/www/html
-# chmod -R 775 /var/www/html
-
-# lighty-enable-mod fastcgi
-# lighty-enable-mod fastcgi-php
-# systemctl restart lighttpd
-
-# apt-get install libstdc++-arm-none-eabi-newlib -y
-
 echo ""
 echo "#######################"
 echo "==> Depot des logiciels"

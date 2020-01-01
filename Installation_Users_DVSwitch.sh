@@ -137,9 +137,9 @@ tar xf ${REP_COURANT}/${SER_OUTIL_TAR}
 
 
 clear
-echo "==================================================================="
+echo "==============================================================="
 echo "==> Mise en place de ${INDICATIF} sur votre DVSwitch Server <=="
-echo "==================================================================="
+echo "==============================================================="
 sleep 3
 
 if [ ! -d "${REP_COURANT}/${SER_OUTIL}_${INDICATIF}" ]
@@ -149,6 +149,16 @@ if [ ! -d "${REP_COURANT}/${SER_OUTIL}_${INDICATIF}" ]
 	exit 1
 fi
 
+echo ""
+echo "######################################"
+echo "==> Creation des repertoires de depots"
+echo "######################################"
+mkdir -p /depot/G4KLX
+echo "mkdir -p /depot/G4KLX"
+mkdir -p /depot/DVSwitch
+echo "mkdir -p /depot/DVSwitch"
+
+echo ""
 echo "#######################"
 echo "==> Depot des logiciels"
 echo "#######################"
