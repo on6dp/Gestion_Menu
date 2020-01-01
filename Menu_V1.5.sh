@@ -18,6 +18,8 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
+chmod 755 ./Services_Outils/*
+
 while : ; do
 OPTION=$(whiptail --title "F1PTL Gestion_Menu Version ${Version}" --menu " Votre choix ?" 20 50 10 \
 1 "Installation DVSwitch Server" \
