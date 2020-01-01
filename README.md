@@ -8,13 +8,13 @@ Prendre la documentation qui se trouve dans la repository "Documentations"
 
 Se connecter avec les droits "root".
 
-Se positionner dans le repertoire cd /home/utilisateur
+Se positionner dans le repertoire cd /home/pi
 
 $ sudo apt install git -y
-  
+
 $ sudo git clone url.....
 
-$ sudo chmod 755 *.sh
+$sudo chmod 755 *.sh
 
 $ sudo ./Menu_V1.5.sh
 
