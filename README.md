@@ -14,6 +14,8 @@ $ sudo apt install git -y
 
 $ sudo git clone url.....
 
+$cd Gestion_Menu
+
 $sudo chmod 755 *.sh
 
 $ sudo ./Menu_V1.5.sh
