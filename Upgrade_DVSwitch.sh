@@ -9,7 +9,7 @@
 # Variables #
 #############
 REP_COURANT=`pwd`
-DATE=`date +%Y%m%d`
+DATE=`date +%Y%m%d_%H:%M:%S`
 #####################################
 if [ $(id -u) -ne 0 ]
         then
