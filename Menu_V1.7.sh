@@ -27,7 +27,7 @@ tar -cf ./${FIC_REF_TAR} ./${FIC_REF}
 tar -cf ./${SER_OUTIL_TAR} ./${SER_OUTIL}
 
 while : ; do
-OPTION=$(whiptail --title "F1PTL Gestion_Menu Version ${Version}" --menu " Votre choix ?" 20 50 10 \
+OPTION=$(whiptail --title "F1PTL Gestion_Menu Version ${Version}" --menu " Votre choix ?" 20 50 11 \
 1 "Installation DVSwitch Server" \
 2 "Modification DVSwitch Server" \
 3 "Service DVSwitch Server" \
@@ -37,7 +37,7 @@ OPTION=$(whiptail --title "F1PTL Gestion_Menu Version ${Version}" --menu " Votre
 7 "Installation HBlink3 et HBmonitor" \
 8 "Modification HBlink3 et HBmonitor" \
 9 "Service HBlink3 et HBmonitor" \
-10 "Upgrade VSwitch Server" \
+10 "Upgrade DVSwitch Server" \
 11 "Redemarrage RaspBerryPi" 3>&1 1>&2 2>&3)
  
 exitstatus=$?
