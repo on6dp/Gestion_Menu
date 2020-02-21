@@ -37,7 +37,8 @@ OPTION=$(whiptail --title "F1PTL Gestion_Menu Version ${Version}" --menu " Votre
 7 "Installation HBlink3 et HBmonitor" \
 8 "Modification HBlink3 et HBmonitor" \
 9 "Service HBlink3 et HBmonitor" \
-10 "Redemarrage RaspBerryPi" 3>&1 1>&2 2>&3)
+10 "Upgrade VSwitch Server" \
+11 "Redemarrage RaspBerryPi" 3>&1 1>&2 2>&3)
  
 exitstatus=$?
 
@@ -55,7 +56,8 @@ case $OPTION in
 7) ${REP_COURANT}/Installation_HB.sh ;;
 8) ${REP_COURANT}/Modification_HB.sh ;;
 9) ${REP_COURANT}/Service_HBlink3.sh ;;
-10) if (whiptail --title " Redemarrage RaspBerryPI  Oui / Non" --yesno "Redemarrage du RaspBerryPI ?" 10 60) then
+10) ${REP_COURANT}/Upgrade_DVSwitch.sh ;;
+11) if (whiptail --title " Redemarrage RaspBerryPI  Oui / Non" --yesno "Redemarrage du RaspBerryPI ?" 11 60) then
 	echo "Demarrage en cours ..." ; reboot
 	else
 	echo "==> vous avez annule"; exit 1
