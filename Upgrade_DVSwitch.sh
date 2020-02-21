@@ -17,7 +17,7 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-whiptail --title "F1PTL UPGRADE Version 1.0" --msgbox "Upgrade des logiciels /opt/Analog_Bridge et /opt/MMDVM_Bridge.\n\n Appuyer sur la touche Entree pour continuer." 10 60
+whiptail --title "F1PTL UPGRADE Version 1.0" --msgbox "Mises a jour des logiciels : \n/opt/Analog_Bridge \n/opt/MMDVM_Bridge \n\n Appuyer sur la touche Entree pour continuer." 13 55
 
 clear
 echo "==================================================================="
