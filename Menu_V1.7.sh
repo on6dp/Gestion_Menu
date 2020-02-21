@@ -21,9 +21,10 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
+cd ${REP_COURANT}
 chmod 755 ./Services_Outils/*
-tar -cf ${REP_COURANT}/${FIC_REF_TAR} ${REP_COURANT}/${FIC_REF}
-tar -cf ${REP_COURANT}/${SER_OUTIL_TAR} ${REP_COURANT}/${SER_OUTIL}
+tar -cf ./${FIC_REF_TAR} ./${FIC_REF}
+tar -cf ./${SER_OUTIL_TAR} ./${SER_OUTIL}
 
 while : ; do
 OPTION=$(whiptail --title "F1PTL Gestion_Menu Version ${Version}" --menu " Votre choix ?" 20 50 10 \
