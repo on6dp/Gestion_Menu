@@ -9,6 +9,7 @@
 # Variables #
 #############
 REP_COURANT=`pwd`
+DATE=`date +%Y%m%d`
 #####################################
 if [ $(id -u) -ne 0 ]
         then
@@ -70,10 +71,10 @@ echo "##################################################"
 echo "==> Sauvegarde des fichiers Analog et MMDVM_Bridge"
 echo "##################################################"
 mkdir -p /usr/src/svg
-cp -rf /opt/Analog_Bridge /usr/src/svg/Analog_Bridge
-echo "cp -rf /opt/Analog_Bridge /usr/src/svg/Analog_Bridge"
-cp -rf /opt/MMDVM_Bridge /usr/src/svg/MMDVM_Bridge
-echo "cp -rf /opt/MMDVM_Bridge /usr/src/svg/MMDVM_Bridge"
+cp -rf /opt/Analog_Bridge /usr/src/svg/Analog_Bridge_${DATE}
+echo "cp -rf /opt/Analog_Bridge /usr/src/svg/Analog_Bridge_${DATE}"
+cp -rf /opt/MMDVM_Bridge /usr/src/svg/MMDVM_Bridge_${DATE}
+echo "cp -rf /opt/MMDVM_Bridge /usr/src/svg/MMDVM_Bridge_${DATE}"
 
 echo ""
 echo "#############################################"
