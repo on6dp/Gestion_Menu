@@ -37,7 +37,7 @@ OPTION=$(whiptail --title "F1PTL Gestion_Menu Version ${Version}" --menu " Votre
 7 "Installation HBlink3 et HBmonitor" \
 8 "Modification HBlink3 et HBmonitor" \
 9 "Service HBlink3 et HBmonitor" \
-10 "Upgrade DVSwitch Server" \
+10 "Mise a jour DVSwitch Server" \
 11 "Redemarrage RaspBerryPi" 3>&1 1>&2 2>&3)
  
 exitstatus=$?
