@@ -94,7 +94,6 @@ esac
 cp -rf /usr/src/MMDVM_Bridge/MMDVM_Bridge /opt/MMDVM_Bridge
 echo "cp -rf /usr/src/MMDVM_Bridge/MMDVM_Bridge /opt/MMDVM_Bridge"
 
-
 cd /usr/src/Analog_Bridge/bin
 PROC=`uname -m`
 case ${PROC} in
@@ -114,9 +113,9 @@ echo "cp -rf /usr/src/Analog_Bridge/dvswitch.sh /opt/Analog_Bridge"
 
 
 echo ""
-echo "#############################################"
+echo "#################################################"
 echo "==> Demarrage des services Analog et MMDVM_Bridge"
-echo "#############################################"
+echo "#################################################"
 sudo systemctl start analog_bridge.service
 echo "sudo systemctl start analog_bridge.service"
 sleep 1
@@ -132,7 +131,7 @@ echo "==========================================================="
 
 
 echo ""
-echo "##########################"
+echo "#####################"
 echo "==> Fin d upgrade <=="
-echo "##########################"
+echo "#####################"
 
