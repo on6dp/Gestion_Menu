@@ -24,12 +24,10 @@ Dans un premier temps on lance l'installation du DVSwitch Server.
 
 Si vous avez besoin de mettre en place un 2eme indicatif, prendre "Installation Users DVSwitch Server".
 
-=======================================================================================================
+O==]>>>>>>>>>>>>>
 
 Extraction du tableau de N4IRS developpeur Analog et MMDVM_Bridge sur la compatibilité des binaires en fonction des architectures 
 processeurs. utilisation de la commande : uname -a  ou  dpkg --print-architecture
-
-==================================================================
 
 binaire amd64 --- 64 bit Intel/AMD --- 3.16.0-4-amd64 #1 x86_64
 
@@ -41,7 +39,7 @@ binaire armv6l --- RPi 1/Zero --- 4.14.98+ armv6l
 
 binaire i386 --- 32bit Intel/AMD --- 4.9.0-11-686-pae i686
 
-==================================================================
+O==]>>>>>>>>>>>>>
 
 73's
 Bruno
