@@ -18,7 +18,7 @@ $cd Gestion_Menu
 
 $sudo chmod 755 *.sh
 
-$ sudo ./Menu_V1.5.sh
+$ sudo ./Menu_V1.7.sh
 
 Dans un premier temps on lance l'installation du DVSwitch Server.
 
