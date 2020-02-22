@@ -21,9 +21,6 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-# Instalaltion Wiptail sur le serveur Linux
-apt install whiptail -y
-
 cd ${REP_COURANT}
 chmod 755 ./Services_Outils/*
 tar -cf ./${FIC_REF_TAR} ./${FIC_REF}
