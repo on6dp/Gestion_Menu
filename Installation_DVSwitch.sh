@@ -72,14 +72,20 @@ MASTER_IP_BM=$(whiptail --title "Choix du Master DMR" --radiolist \
 if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
 	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 6 \
-	"55570" "Port 55570" ON \
-	"55571" "Port 55571" OFF \
-	"55572" "Port 55572" OFF \
-	"55573" "Port 55573" OFF \
-	"55574" "Port 55574" OFF \
-	"55575" "Port 55575" OFF 3>&1 1>&2 2>&3)
+	"55570" "DMO70" ON \
+	"55571" "DMO71" OFF \
+	"55572" "DMO72" OFF \
+	"55573" "DMO73" OFF \
+	"55574" "DMO74" OFF \
+	"55575" "DMO75" OFF \
+	"55576" "DMO76" OFF \
+	"55577" "DMO77" OFF \
+	"55578" "DMO78" OFF \
+	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
- 
+
+
+
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
