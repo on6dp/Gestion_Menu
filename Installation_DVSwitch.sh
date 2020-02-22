@@ -60,14 +60,14 @@ fi
 #
 MASTER_IP_BM=$(whiptail --title "Choix du Master DMR" --radiolist \
 "Cocher la case qui correspond a votre choix" 15 60 4 \
-"213.222.29.197" "BM_Netherlands_2042" ON \
+"213.222.29.197" "BM_Netherlands_2042" OFF \
 "217.182.129.131" "BM_France_2082" OFF \
 "158.69.203.89" "BM_Canada_3021" OFF \
 "213.32.19.95" "HB_Nord" OFF \
 "saint-appo.fr" "HB_Loire" OFF \
 "151.80.37.99" "HB_Pyr.O" OFF \
 "51.178.51.244" "HB_Limouzi" OFF \
-"109.15.57.11" "HB_Yvelines" OFF 3>&1 1>&2 2>&3)
+"109.15.57.11" "HB_Yvelines" ON 3>&1 1>&2 2>&3)
 
 if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
