@@ -3,7 +3,7 @@
 #===================================
 # Creation le 21/02/2020
 # Par F1PTL Bruno
-# Version 3.14
+# Version 3.15
 #===================================
 #####################################
 # Variables #
@@ -71,7 +71,7 @@ MASTER_IP_BM=$(whiptail --title "Choix du Master DMR" --radiolist \
 
 if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
-	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 6 \
+	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
 	"55570" "DMO70" ON \
 	"55571" "DMO71" OFF \
 	"55572" "DMO72" OFF \
@@ -84,7 +84,65 @@ if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
 
+if [ ${MASTER_IP_BM} = "51.178.51.244" ]; then
+	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
+	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
+	"55570" "DMO70" ON \
+	"55571" "DMO71" OFF \
+	"55572" "DMO72" OFF \
+	"55573" "DMO73" OFF \
+	"55574" "DMO74" OFF \
+	"55575" "DMO75" OFF \
+	"55576" "DMO76" OFF \
+	"55577" "DMO77" OFF \
+	"55578" "DMO78" OFF \
+	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
+fi
 
+if [ ${MASTER_IP_BM} = "151.80.37.99" ]; then
+	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
+	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
+	"55570" "DMO70" ON \
+	"55571" "DMO71" OFF \
+	"55572" "DMO72" OFF \
+	"55573" "DMO73" OFF \
+	"55574" "DMO74" OFF \
+	"55575" "DMO75" OFF \
+	"55576" "DMO76" OFF \
+	"55577" "DMO77" OFF \
+	"55578" "DMO78" OFF \
+	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
+fi
+
+if [ ${MASTER_IP_BM} = "saint-appo.fr" ]; then
+	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
+	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
+	"55570" "DMO70" ON \
+	"55571" "DMO71" OFF \
+	"55572" "DMO72" OFF \
+	"55573" "DMO73" OFF \
+	"55574" "DMO74" OFF \
+	"55575" "DMO75" OFF \
+	"55576" "DMO76" OFF \
+	"55577" "DMO77" OFF \
+	"55578" "DMO78" OFF \
+	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
+fi
+
+if [ ${MASTER_IP_BM} = "213.32.19.95" ]; then
+	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
+	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
+	"55570" "DMO70" ON \
+	"55571" "DMO71" OFF \
+	"55572" "DMO72" OFF \
+	"55573" "DMO73" OFF \
+	"55574" "DMO74" OFF \
+	"55575" "DMO75" OFF \
+	"55576" "DMO76" OFF \
+	"55577" "DMO77" OFF \
+	"55578" "DMO78" OFF \
+	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
+fi
 
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
