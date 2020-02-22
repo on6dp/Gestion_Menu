@@ -69,6 +69,9 @@ MASTER_IP_BM=$(whiptail --title "Choix du Master DMR" --radiolist \
 "51.178.51.244" "HB_Limouzi" OFF \
 "109.15.57.11" "HB_Yvelines" ON 3>&1 1>&2 2>&3)
 exitstatus=$?
+if [ $exitstatus != 0 ]; then
+	echo "==> vous avez annule"; exit 1
+fi
 
 if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
@@ -85,6 +88,9 @@ if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
 exitstatus=$?
+if [ $exitstatus != 0 ]; then
+	echo "==> vous avez annule"; exit 1
+fi
 
 if [ ${MASTER_IP_BM} = "51.178.51.244" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
@@ -101,6 +107,9 @@ if [ ${MASTER_IP_BM} = "51.178.51.244" ]; then
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
 exitstatus=$?
+if [ $exitstatus != 0 ]; then
+	echo "==> vous avez annule"; exit 1
+fi
 
 if [ ${MASTER_IP_BM} = "151.80.37.99" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
@@ -117,6 +126,9 @@ if [ ${MASTER_IP_BM} = "151.80.37.99" ]; then
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
 exitstatus=$?
+if [ $exitstatus != 0 ]; then
+	echo "==> vous avez annule"; exit 1
+fi
 
 if [ ${MASTER_IP_BM} = "saint-appo.fr" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
@@ -133,6 +145,9 @@ if [ ${MASTER_IP_BM} = "saint-appo.fr" ]; then
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
 exitstatus=$?
+if [ $exitstatus != 0 ]; then
+	echo "==> vous avez annule"; exit 1
+fi
 
 if [ ${MASTER_IP_BM} = "213.32.19.95" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
@@ -149,7 +164,6 @@ if [ ${MASTER_IP_BM} = "213.32.19.95" ]; then
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
 exitstatus=$?
-
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
