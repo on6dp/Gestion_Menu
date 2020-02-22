@@ -59,7 +59,7 @@ if [ $exitstatus != 0 ]; then
 fi
 #
 MASTER_IP_BM=$(whiptail --title "Choix du Master DMR" --radiolist \
-"Cocher la case qui correspond a votre choix" 15 60 4 \
+"Cocher la case qui correspond a votre choix" 15 60 8 \
 "213.222.29.197" "BM_Netherlands_2042" OFF \
 "217.182.129.131" "BM_France_2082" OFF \
 "158.69.203.89" "BM_Canada_3021" OFF \
@@ -83,7 +83,7 @@ if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
 	"55578" "DMO78" OFF \
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
-
+exitstatus=$?
 if [ ${MASTER_IP_BM} = "51.178.51.244" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
 	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
@@ -98,7 +98,7 @@ if [ ${MASTER_IP_BM} = "51.178.51.244" ]; then
 	"55578" "DMO78" OFF \
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
-
+exitstatus=$?
 if [ ${MASTER_IP_BM} = "151.80.37.99" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
 	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
@@ -113,7 +113,7 @@ if [ ${MASTER_IP_BM} = "151.80.37.99" ]; then
 	"55578" "DMO78" OFF \
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
-
+exitstatus=$?
 if [ ${MASTER_IP_BM} = "saint-appo.fr" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
 	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
@@ -128,7 +128,7 @@ if [ ${MASTER_IP_BM} = "saint-appo.fr" ]; then
 	"55578" "DMO78" OFF \
 	"55579" "DMO79" OFF 3>&1 1>&2 2>&3)
 fi
-
+exitstatus=$?
 if [ ${MASTER_IP_BM} = "213.32.19.95" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
 	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
