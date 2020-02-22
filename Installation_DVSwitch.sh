@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 21/02/2020
+# Creation le 22/02/2020
 # Par F1PTL Bruno
-# Version 3.15
+# Version 3.16
 #===================================
 #####################################
 # Variables #
@@ -203,23 +203,6 @@ if [ ! -d Fichiers_Ini_Ref_${INDICATIF} ]
 fi
 
 echo ""
-echo "######################################"
-echo "==> Creation des repertoires de depots"
-echo "######################################"
-mkdir -p /depot/G4KLX
-echo "mkdir -p /depot/G4KLX"
-mkdir -p /depot/DVSwitch
-echo "mkdir -p /depot/DVSwitch"
-
-echo ""
-echo "##############################"
-echo "==> Installation dvswitch-repo"
-echo "##############################"
-wget http://dvswitch.org/install-dvswitch-repo
-chmod +x install-dvswitch-repo
-./install-dvswitch-repo
-
-echo ""
 echo "######################"
 echo "==> APT-GET des outils"
 echo "######################"
@@ -239,6 +222,23 @@ apt-get install build-essential -y
 apt-get install dos2unix -y
 apt-get install htop -y
 apt-get install python -y
+
+echo ""
+echo "######################################"
+echo "==> Creation des repertoires de depots"
+echo "######################################"
+mkdir -p /depot/G4KLX
+echo "mkdir -p /depot/G4KLX"
+mkdir -p /depot/DVSwitch
+echo "mkdir -p /depot/DVSwitch"
+
+echo ""
+echo "##############################"
+echo "==> Installation dvswitch-repo"
+echo "##############################"
+wget http://dvswitch.org/install-dvswitch-repo
+chmod +x install-dvswitch-repo
+./install-dvswitch-repo
 
 echo ""
 echo "#######################"
