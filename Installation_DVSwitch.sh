@@ -21,7 +21,7 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-if (whiptail --title "F1PTL MENU Version 3.14" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
+if (whiptail --title "F1PTL MENU Version 3.16" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
     	echo "==> vous avez valider votre choix"
 	else
     	echo "==> vous avez annule"; exit 1
@@ -231,6 +231,8 @@ mkdir -p /depot/G4KLX
 echo "mkdir -p /depot/G4KLX"
 mkdir -p /depot/DVSwitch
 echo "mkdir -p /depot/DVSwitch"
+mkdir -p /opt/DVSwitch_tmp
+echo "mkdir -p /opt/DVSwitch_tmp"
 
 echo ""
 echo "##############################"
