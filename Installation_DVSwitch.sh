@@ -229,8 +229,6 @@ mkdir -p /depot/G4KLX
 echo "mkdir -p /depot/G4KLX"
 mkdir -p /depot/DVSwitch
 echo "mkdir -p /depot/DVSwitch"
-mkdir -p /opt/DVSwitch_tmp
-echo "mkdir -p /opt/DVSwitch_tmp"
 
 echo ""
 echo "##############################"
