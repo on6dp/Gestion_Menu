@@ -418,7 +418,7 @@ systemctl daemon-reload
 cd $REP_COURANT/${SER_OUTIL}
 systemctl enable *.service
 cp -rf $REP_COURANT/${SER_OUTIL}/liste_exec.txt /usr/local/sbin
-
+echo "cp -rf $REP_COURANT/${SER_OUTIL}/liste_exec.txt /usr/local/sbin"
 
 echo ""
 echo "#######################################"
