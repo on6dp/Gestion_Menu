@@ -4,9 +4,6 @@ HBIDUpdate.sh
 NXDNHostsupdate.sh
 NXDNIDUpdate.sh
 P25Hostsupdate.sh
-TGList-DMR_update.sh
-TGList-NXDN_update.sh
-TGList-P25_update.sh
 TGListUpdate.sh
 XLXHostsupdate.sh
 YSFHostsupdate.sh
