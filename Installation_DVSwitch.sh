@@ -243,6 +243,15 @@ chmod +x install-dvswitch-repo
 ./install-dvswitch-repo
 
 echo ""
+echo "#########################################"
+echo "==> Creation repertoire mmdvm et dvswitch"
+echo "#########################################"
+mkdir -p /var/lib/mmdvm
+echo "mkdir -p /var/lib/mmdvm"
+mkdir -p /var/lib/dvswitch
+echo "mkdir -p /var/lib/dvswitch"
+
+echo ""
 echo "#######################"
 echo "==> Depot des logiciels"
 echo "#######################"
