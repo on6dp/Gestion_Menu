@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 22/02/2020
+# Creation le 24/02/2020
 # Par F1PTL Bruno
-# Version 3.16
+# Version 3.17
 #===================================
 #####################################
 # Variables #
@@ -21,7 +21,7 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-if (whiptail --title "F1PTL MENU Version 3.16" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
+if (whiptail --title "F1PTL MENU Version 3.17" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
     	echo "==> vous avez valider votre choix"
 	else
     	echo "==> vous avez annule"; exit 1
@@ -417,6 +417,7 @@ echo "cp -rf $REP_COURANT/${SER_OUTIL}/dvs_*.sh /opt/Analog_Bridge"
 systemctl daemon-reload
 cd $REP_COURANT/${SER_OUTIL}
 systemctl enable *.service
+cp -rf $REP_COURANT/${SER_OUTIL}/liste_exec.txt /usr/local/sbin
 
 
 echo ""
@@ -441,7 +442,7 @@ echo "####################################"
 echo "==> Execution des scripts de donnees"
 echo "####################################"
 cd /usr/local/sbin
-for i in *
+for i in liste_exec.txt
 do
  echo "Execution $i ..."
  ./$i
