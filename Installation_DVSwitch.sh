@@ -214,8 +214,6 @@ apt-get install g++ -y
 apt-get install make -y
 apt-get install gnupg2 -y
 apt-get install jq -y
-apt-get install dvswitch -y
-apt-get install quantar -y
 apt-get install screen -y
 apt-get install libwxgtk3.0-dev -y
 apt-get install build-essential -y
@@ -241,6 +239,9 @@ echo "##############################"
 wget http://dvswitch.org/install-dvswitch-repo
 chmod +x install-dvswitch-repo
 ./install-dvswitch-repo
+
+apt-get install dvswitch -y
+apt-get install quantar -y
 
 echo ""
 echo "#########################################"
