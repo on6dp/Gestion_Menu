@@ -13,6 +13,7 @@ FIC_REF="Fichiers_Ini_Ref"
 FIC_REF_TAR="Fichiers_Ini_Ref.tar"
 SER_OUTIL="Services_Outils"
 SER_OUTIL_TAR="Services_Outils.tar"
+export LANGUAGE=en_US.UTF-8
 #####################################
 if [ $(id -u) -ne 0 ]
         then
