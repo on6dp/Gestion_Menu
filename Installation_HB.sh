@@ -12,6 +12,7 @@ REP_COURANT=`pwd`
 FIC_REF="Fichiers_Ini_Ref"
 FIC_REF_TAR="Fichiers_Ini_Ref.tar"
 HB_DEPOT="HB_Depot"
+export LANGUAGE=en_US.UTF-8
 #####################################
 if [ $(id -u) -ne 0 ]
         then
@@ -69,9 +70,9 @@ echo "==> Telechargement des modules HBlink3, DMR_Utils3 et HBmonitor"
 echo "###############################################################"
 mkdir -p ${REP_COURANT}/${HB_DEPOT}
 cd ${REP_COURANT}/${HB_DEPOT}
-sudo git clone https://github.com/n0mjs710/hblink3.git
-sudo git clone https://github.com/n0mjs710/dmr_utils3.git
-sudo git clone https://github.com/sp2ong/HBmonitor.git
+git clone https://github.com/n0mjs710/hblink3.git
+git clone https://github.com/n0mjs710/dmr_utils3.git
+git clone https://github.com/sp2ong/HBmonitor.git
 
 echo ""
 echo "#############################################################"
