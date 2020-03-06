@@ -100,7 +100,6 @@ echo "##############################################"
 mv ${REP_COURANT}/${HB_DEPOT}/hblink3 /opt
 mv ${REP_COURANT}/${HB_DEPOT}/HBmonitor /opt
 
-
 echo ""
 echo "################################################"
 echo "==> Mise en place des fichiers de configurations"
