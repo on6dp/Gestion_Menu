@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 03/12/2019
+# Creation le 06/03/2020
 # Par F1PTL Bruno
-# Version 1.0
+# Version 1.1
 #===================================
 #####################################
 # Variables #
@@ -115,8 +115,11 @@ echo "==> Mise en place des fichiers Services"
 echo "#######################################"
 cp -rf ${REP_COURANT}/Services_Outils/hblink3.service /lib/systemd/system/hblink3.service
 cp -rf ${REP_COURANT}/Services_Outils/hbmonitor.service /lib/systemd/system/hbmonitor.service
-systemctl enable *.service
-echo "systemctl enable *.service"
+systemctl enable /lib/systemd/system/hblink3.service
+echo "systemctl enable /lib/systemd/system/hblink3.service"
+sleep 1
+systemctl enable /lib/systemd/system/hbmonitor.service
+echo "systemctl enable /lib/systemd/system/hbmonitor.service"
 
 echo ""
 echo "######################################"
