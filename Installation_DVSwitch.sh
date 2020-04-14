@@ -486,6 +486,8 @@ echo "############################"
 echo "==> Mise en place AMBEserver"
 echo "############################"
 cd $REP_COURANT
+cp -rf /etc/rc.local /etc/rc.local_origine
+echo "cp -rf /etc/rc.local /etc/rc.local_origine"
 cp -rf ./Services_Outils/rc.local_init /etc/rc.local
 echo "cp -rf ./Services_Outils/rc.local_init /etc/rc.local"
 cp -rf ./Services_Outils/AMBEserver_init /etc/init.d/AMBEserver
