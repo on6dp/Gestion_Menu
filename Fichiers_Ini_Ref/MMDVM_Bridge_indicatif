@@ -27,7 +27,7 @@ File=/var/lib/mmdvm/DMRIds.dat
 Time=24
 
 [NXDN Id Lookup]
-File=/var/lib/mmdvm/NXDN.csv
+File=/var/lib/mmdvm/nxdn.csv
 Time=24
 
 [Modem]
