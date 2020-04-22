@@ -31,7 +31,7 @@ RXPort = 32TXG3                  ; Port to listen on (import)
 ; FallbackID = 1234567            ; In case we can not find a valid DMR id in the database, export this one
 ExportTG = TXG                    ; Which TG to export
 Slot = 2                        ; Export slot
-Message = Serveur DMR DVSWITCH
+Message = Serveur DStar DVSWITCH
 
 ; Configure the NXDN Partner
 ; Audio format is AMBE 72 bit
