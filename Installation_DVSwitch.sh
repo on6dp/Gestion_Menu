@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 24/02/2020
+# Creation le 14/04/2020
 # Par F1PTL Bruno
-# Version 3.17
+# Version 3.18
 #===================================
 #####################################
 # Variables #
@@ -68,7 +68,7 @@ MASTER_IP_BM=$(whiptail --title "Choix du Master DMR" --radiolist \
 "saint-appo.fr" "HBlink_Loire" OFF \
 "151.80.37.99" "HBlink_Pyr.O" OFF \
 "51.178.51.244" "HBlink_Limouzi" OFF \
-"109.15.57.11" "HBlink_Yvelines" ON 3>&1 1>&2 2>&3)
+"51.178.86.131" "HBlink_Yvelines" ON 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
@@ -486,6 +486,8 @@ echo "############################"
 echo "==> Mise en place AMBEserver"
 echo "############################"
 cd $REP_COURANT
+cp -rf /etc/rc.local /etc/rc.local_origine
+echo "cp -rf /etc/rc.local /etc/rc.local_origine"
 cp -rf ./Services_Outils/rc.local_init /etc/rc.local
 echo "cp -rf ./Services_Outils/rc.local_init /etc/rc.local"
 cp -rf ./Services_Outils/AMBEserver_init /etc/init.d/AMBEserver
