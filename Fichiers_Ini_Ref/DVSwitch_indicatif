@@ -20,6 +20,7 @@ Address = 127.0.0.1             ; Address to send AMBE TLV frames to (export)
 TXPort = 31TXG0                  ; Port to send AMBE TLV frames to (export)
 RXPort = 31TXG3                  ; Port to listen on (import)
 Slot = 2                        ; Export slot
+TalkerAlias = Serveur DMR DVSWITCH
 
 ; Configure the D-Star Partner
 ; Audio format is AMBE 48 bit (DSAMBE)
@@ -30,6 +31,7 @@ RXPort = 32TXG3                  ; Port to listen on (import)
 ; FallbackID = 1234567            ; In case we can not find a valid DMR id in the database, export this one
 ExportTG = TXG                    ; Which TG to export
 Slot = 2                        ; Export slot
+Message = Serveur DMR DVSWITCH
 
 ; Configure the NXDN Partner
 ; Audio format is AMBE 72 bit
@@ -46,8 +48,8 @@ Slot = 2                        ; Export slot
 ; Audio format is IMBE 88 bit
 [P25]
 Address = 127.0.0.1             ; Address to send AMBE TLV frames to (export)
-TXPort = 34TXG0                  ; Port to send AMBE TLV frames to (export)
-RXPort = 34TXG3                  ; Port to listen on (import)
+TXPort = 34TXG0                 ; Port to send AMBE TLV frames to (export)
+RXPort = 34TXG3                 ; Port to listen on (import)
 Slot = 2                        ; Export slot
 
 ; Configure the Yaesu Fusion Partner
@@ -55,8 +57,9 @@ Slot = 2                        ; Export slot
 ; Audio format is IMBE 88 bit
 [YSF]
 Address = 127.0.0.1             ; Address to send AMBE TLV frames to (export)
-TXPort = 35TXG0                  ; Port to send AMBE TLV frames to (export)
-RXPort = 35TXG3                  ; Port to listen on (import)
-; FallbackID = 1234567            ; In case we can not find a valid DMR id in the database, export this one
-; ExportTG = 1234                 ; Which TG to export
+TXPort = 35TXG0                 ; Port to send AMBE TLV frames to (export)
+RXPort = 35TXG3                 ; Port to listen on (import)
+TXWidePort = 351TXG3            ; Port to send IMBE TLV frames to for YSFw (export)
+; FallbackID = 1234567          ; In case we can not find a valid DMR id in the database, export this one
+; ExportTG = 1234               ; Which TG to export
 Slot = 2                        ; Export slot
