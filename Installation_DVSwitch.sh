@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 05/005/2020
+# Creation le 05/05/2020
 # Par F1PTL Bruno
 # Version 3.19
 #===================================
@@ -419,6 +419,14 @@ esac
 [ -d /opt/Analog_Bridge ] && rm -rf /opt/Analog_Bridge
 cp -rf /usr/src/Analog_Bridge /opt/Analog_Bridge
 echo "cp -rf /usr/src/Analog_Bridge /opt/Analog_Bridge"
+
+
+echo ""
+echo "#############################################"
+echo "==> Copie DVSWitch.sh dans /opt/Analog_Bridge"
+echo "#############################################"
+cp -rf /opt/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge/dvswitch.sh
+echo "cp -rf /opt/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge/dvswitch.sh"
 
 
 echo ""
