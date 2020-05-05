@@ -351,6 +351,9 @@ echo "#############################################"
 cd /usr/src/MMDVM_Bridge/bin
 PROC=`uname -m`
 case ${PROC} in
+	aarch64) cp -rf MMDVM_Bridge.arm64 ../MMDVM_Bridge
+        	chmod 755 /usr/src/MMDVM_Bridge/MMDVM_Bridge ;;
+		
 	armv7l) cp -rf MMDVM_Bridge.armhf ../MMDVM_Bridge
 		chmod 755 /usr/src/MMDVM_Bridge/MMDVM_Bridge ;;
 			
@@ -368,7 +371,10 @@ echo "cp -rf /usr/src/MMDVM_Bridge /opt/MMDVM_Bridge_${INDICATIF}"
 
 cd /usr/src/Analog_Bridge/bin
 PROC=`uname -m`
-case ${PROC} in
+case ${PROC} in 
+	aarch64) cp -rf Analog_Bridge.arm64 ../Analog_Bridge
+                chmod 755 /usr/src/Analog_Bridge/Analog_Bridge ;;
+		
 	armv7l) cp -rf Analog_Bridge.armhf ../Analog_Bridge
 		chmod 755 /usr/src/Analog_Bridge/Analog_Bridge ;;
 			
