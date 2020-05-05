@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 14/04/2020
+# Creation le 05/005/2020
 # Par F1PTL Bruno
-# Version 3.18
+# Version 3.19
 #===================================
 #####################################
 # Variables #
@@ -22,7 +22,7 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-if (whiptail --title "F1PTL MENU Version 3.17" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
+if (whiptail --title "F1PTL MENU Version 3.19" --yesno "Renseigner les informations demandees afin de mettre a jour tous les fichers d initialisations. Indicatif, ID-DMR, ID-NXDN, port USRP..." 8 78); then
     	echo "==> vous avez valider votre choix"
 	else
     	echo "==> vous avez annule"; exit 1
@@ -384,6 +384,9 @@ echo "#############################################"
 cd /usr/src/MMDVM_Bridge/bin
 PROC=`uname -m`
 case ${PROC} in
+	aarch64) cp -rf MMDVM_Bridge.arm64 ../MMDVM_Bridge
+        	 chmod 755 /usr/src/MMDVM_Bridge/MMDVM_Bridge ;;
+			
 	armv7l) cp -rf MMDVM_Bridge.armhf ../MMDVM_Bridge
 		chmod 755 /usr/src/MMDVM_Bridge/MMDVM_Bridge ;;
 			
@@ -401,6 +404,9 @@ echo "cp -rf /usr/src/MMDVM_Bridge /opt/MMDVM_Bridge"
 cd /usr/src/Analog_Bridge/bin
 PROC=`uname -m`
 case ${PROC} in
+	aarch64) cp -rf Analog_Bridge.arm64 ../Analog_Bridge
+                chmod 755 /usr/src/Analog_Bridge/Analog_Bridge ;;
+			
 	armv7l) cp -rf Analog_Bridge.armhf ../Analog_Bridge
 		chmod 755 /usr/src/Analog_Bridge/Analog_Bridge ;;
 			
