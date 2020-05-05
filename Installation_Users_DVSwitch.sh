@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 05/005/2020
+# Creation le 05/05/2020
 # Par F1PTL Bruno
 #===================================
 #####################################
@@ -412,6 +412,15 @@ echo "cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvs*.sh /opt/Analog_Bridge
 
 cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvswitch_${INDICATIF}.service /opt/Analog_Bridge_${INDICATIF}/dvswitch.sh
 echo "cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvswitch_${INDICATIF}.service /opt/Analog_Bridge_${INDICATIF}/dvswitch.sh"
+
+
+echo ""
+echo "###########################################################################"
+echo "==> Deplacement des Developpeurs du script dvswitch.sh le 03/05/2020" 
+echo "==> Copie /opt/MMDVM_Bridge/dvswitch.sh dans /opt/Analog_Bridge/dvswitch.sh"
+echo "###########################################################################"
+cp -rf /opt/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge/dvswitch.sh
+echo "cp -rf /opt/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge/dvswitch.sh"
 
 
 echo ""
