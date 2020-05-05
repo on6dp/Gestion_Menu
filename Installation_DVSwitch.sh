@@ -74,7 +74,7 @@ if [ $exitstatus != 0 ]; then
 	echo "==> vous avez annule"; exit 1
 fi
 
-if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
+if [ ${MASTER_IP_BM} = "51.178.86.131" ]; then
 	PORT_HB=$(whiptail --title "Choix du Serveur HBlink" --radiolist \
 	"Choisir en fonction du port disponible sur le serveur HBlink" 15 60 10 \
 	"55570" "DMO70" ON \
