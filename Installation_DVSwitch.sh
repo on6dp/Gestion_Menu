@@ -422,9 +422,10 @@ echo "cp -rf /usr/src/Analog_Bridge /opt/Analog_Bridge"
 
 
 echo ""
-echo "#############################################"
-echo "==> Copie DVSWitch.sh dans /opt/Analog_Bridge"
-echo "#############################################"
+echo "###########################################################################"
+echo "==> Deplacement des Developpeurs du script dvswitch.sh" 
+echo "==> Copie /opt/MMDVM_Bridge/dvswitch.sh dans /opt/Analog_Bridge/dvswitch.sh"
+echo "###########################################################################"
 cp -rf /opt/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge/dvswitch.sh
 echo "cp -rf /opt/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge/dvswitch.sh"
 
