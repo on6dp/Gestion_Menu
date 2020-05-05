@@ -2,7 +2,7 @@
 #
 #
 #
-dvsw="/opt/Analog_Bridge/dvswitch.sh"
+dvsw="/opt/MMDVM_Bridge/dvswitch.sh"
 
 mode=`$dvsw mode`
 tune=`$dvsw tune`
