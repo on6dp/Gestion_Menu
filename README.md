@@ -12,7 +12,7 @@ Se positionner dans le repertoire cd /home/pi
 
 $ sudo apt install git -y
 
-$ sudo git clone url.....
+$ sudo git clone https://github.com/F1PTL/Gestion_Menu.git
 
 $ cd Gestion_Menu
 
