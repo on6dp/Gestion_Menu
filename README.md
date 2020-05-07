@@ -22,7 +22,7 @@ $ sudo ./Menu_V1.8.sh
 
 Dans un premier temps on lance l'installation du DVSwitch Server.
 
-Si vous avez besoin de mettre en place un 2eme indicatif, prendre "Installation Users DVSwitch Server".
+Si vous avez besoin de mettre en place un 2eme indicatif, prendre "Installation Users DVSwitch Server" DMR et YSF seulement.
 
 O==]>>>>>>>>>>>>>
 
