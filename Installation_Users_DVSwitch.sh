@@ -432,7 +432,7 @@ cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/Analog_Bridge_${INDICATIF}.ini /op
 echo "cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/Analog_Bridge_${INDICATIF}.ini /opt/Analog_Bridge_${INDICATIF}/Analog_Bridge.ini"
 
 cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/dvsm.${INDICATIF} /opt/Analog_Bridge_${INDICATIF}/dvsm.macro
-echo "cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/dvsm.macro_${INDICATIF} /opt/Analog_Bridge_${INDICATIF}/dvsm.macro"
+echo "cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/dvsm.${INDICATIF} /opt/Analog_Bridge_${INDICATIF}/dvsm.macro"
 
 cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/DVSwitch_${INDICATIF}.ini /opt/MMDVM_Bridge_${INDICATIF}/DVSwitch.ini
 echo "cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/DVSwitch_${INDICATIF}.ini /opt/MMDVM_Bridge_${INDICATIF}/DVSwitch.ini"
