@@ -7,7 +7,7 @@
 #####################################
 # Variables #
 #############
-Version="1.2"
+Version="1.3"
 REP_COURANT=`pwd`
 FIC_REF="Fichiers_Ini_Ref"
 FIC_REF_TAR="Fichiers_Ini_Ref.tar"
