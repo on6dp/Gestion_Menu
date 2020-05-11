@@ -20,3 +20,18 @@ dbupdate = /opt/MMDVM_Bridge_indicatif/dvswitch.sh collectProcessPushDataFiles
 ; Example TG / Reflector Macro
 9876 =  /opt/MMDVM_Bridge_indicatif/parrot.sh
 
+; Ajout F1PTL Redemarrage du RaspBerry
+; 6666 = sudo reboot
+
+; Ajout F1PTL VW et DN en YSF
+AB10 = /opt/MMDVM_Bridge_indicatif/dvswitch.sh ambemode YSFW
+AB20 = /opt/MMDVM_Bridge_indicatif/dvswitch.sh ambemode YSFN
+
+; Ajout F1PTL Bascule BM vers HBlink3
+9200 = /opt/MMDVM_Bridge_indicatif/dvs_bm_hblink.sh
+9201 = /opt/MMDVM_Bridge_indicatif/dvs_hblink_bm.sh
+
+; Ajout F1PTL Affichage Connexion
+9500 = /opt/MMDVM_Bridge_indicatif/dvs_info.sh
+
+
