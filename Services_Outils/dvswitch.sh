@@ -25,7 +25,7 @@ SCRIPT_VERSION="dvswitch.sh 1.5.6"
 
 AB_DIR=${AB_DIR:-"/var/lib/dvswitch"}
 MMDVM_DIR=${MMDVM_DIR:-"/var/lib/mmdvm"}
-DVSWITCH_INI=${DVSWITCH_INI:-"/opt/MMDVM_Bridge/DVSwitch.ini"}
+DVSWITCH_INI=${DVSWITCH_INI:-"/opt/MMDVM_Bridge_indicatif/DVSwitch.ini"}
 NODE_DIR=${NODE_DIR:-"/tmp"}
 
 # Default server and port assignment, but overridden by value in ABInfo
