@@ -410,8 +410,8 @@ cd $REP_COURANT
 cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvs*.sh /opt/Analog_Bridge_${INDICATIF}
 echo "cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvs*.sh /opt/Analog_Bridge_${INDICATIF}"
 
-cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvswitch_${INDICATIF}.service /opt/Analog_Bridge_${INDICATIF}/dvswitch.sh
-echo "cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvswitch_${INDICATIF}.service /opt/Analog_Bridge_${INDICATIF}/dvswitch.sh"
+cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvswitch_${INDICATIF}.service /opt/MMDVM_Bridge_${INDICATIF}/dvswitch.sh
+echo "cp -rf ${REP_COURANT}/${SER_OUTIL}_${INDICATIF}/dvswitch_${INDICATIF}.service /opt/MMDVM_Bridge_${INDICATIF}/dvswitch.sh"
 
 
 echo ""
