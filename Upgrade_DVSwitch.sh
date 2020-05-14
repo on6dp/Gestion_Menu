@@ -18,7 +18,7 @@ if [ $(id -u) -ne 0 ]
         echo "==> Lancement avec les droits root"
         exit 1
 fi
-if (whiptail --title "F1PTL UPGRADE Version ${Version}" --yesno "Mise a jour des logiciels : \n/opt/Analog_Bridge \n/opt/MMDVM_Bridge.\n\n      Sauvegarde et copie des nouveaux fichiers Macros ..." 13 55); then
+if (whiptail --title "F1PTL UPGRADE Version ${Version}" --yesno "Mise a jour des logiciels : \n/opt/Analog_Bridge \n/opt/MMDVM_Bridge.\n\nSauvegarde et copie : \nLes nouveaux fichiers Macros ..." 13 55); then
     	echo "==> vous avez valider votre choix"
 	else
     	echo "==> vous avez annule"; exit 1
