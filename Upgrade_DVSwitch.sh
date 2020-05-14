@@ -139,6 +139,7 @@ for i in liste_fic.txt
 do
  echo "Sauvegarde $i ..."
  cp -rf /opt/Analog_Bridge/$i /opt/Analog_Bridge/$i_${DATE}
+ sleep 1
  echo ""
 done
 
