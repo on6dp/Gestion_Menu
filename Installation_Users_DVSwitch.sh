@@ -451,6 +451,15 @@ echo "cp -rf ${REP_COURANT}/${FIC_REF}_${INDICATIF}/YSFGateway.ini /opt/YSFGatew
 
 
 echo ""
+echo "###########################################"
+echo "==> Copie des fichiers .txt de ${INDICATIF}"
+echo "###########################################"
+cd $REP_COURANT
+cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge
+echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge"
+
+
+echo ""
 echo "############################################"
 echo "==> Demarrage des services pour ${INDICATIF}"
 echo "############################################"
