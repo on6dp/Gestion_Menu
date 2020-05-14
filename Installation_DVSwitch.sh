@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 05/05/2020
+# Creation le 14/05/2020
 # Par F1PTL Bruno
-# Version 3.19
+# Version 3.20
 #===================================
 #####################################
 # Variables #
@@ -495,6 +495,16 @@ cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/YSFGateway.ini /opt
 echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/YSFGateway.ini /opt"
 cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/ircddbgateway /etc
 echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/ircddbgateway /etc"
+
+
+echo ""
+echo "###########################################"
+echo "==> Copie des fichiers .txt de ${INDICATIF}"
+echo "###########################################"
+cd $REP_COURANT
+cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge
+echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge"
+
 
 echo ""
 echo "############################"
