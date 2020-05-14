@@ -133,9 +133,8 @@ echo "##########i#######################"
 cd $REP_COURANT
 cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}
 echo "cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}"
-cd /opt/Analog_Bridge/
-ls *.txt > $REP_COURANT/liste_fic.txt
-for i in $REP_COURANT/liste_fic.txt
+cd /opt/Analog_Bridge
+for i in *.txt
 do
  echo "Sauvegarde $i ..."
  cp -rf /opt/Analog_Bridge/$i /opt/Analog_Bridge/$i_${DATE}
