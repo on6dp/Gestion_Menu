@@ -137,8 +137,8 @@ echo""
 cd /opt/Analog_Bridge
 for i in *.txt
 do
- echo "Sauvegarde $i ..."
- cp -rf /opt/Analog_Bridge/$i /opt/Analog_Bridge/$i_${DATE}
+ echo "Sauvegarde ${i} ..."
+ cp -rf /opt/Analog_Bridge/${i} /opt/Analog_Bridge/${i}_${DATE}
  sleep 1
  echo ""
 done
