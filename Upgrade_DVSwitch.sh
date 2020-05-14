@@ -119,23 +119,23 @@ cp -rf /usr/src/Analog_Bridge/Analog_Bridge /opt/Analog_Bridge
 echo "cp -rf /usr/src/Analog_Bridge/Analog_Bridge /opt/Analog_Bridge"
 
 echo ""
-echo "#################################################"
+echo "######################################"
 echo "==> Deplacement du fichier dvswitch.sh"
-echo "#################################################"
+echo "######################################"
 cp -rf /usr/src/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge
 echo "cp -rf /usr/src/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge"
 
 
 echo ""
-echo "###############################################"
-echo "==> Sauvegarde des fichiers macros de ${INDICATIF}"
-echo "##########i####################################"
+echo "##################################"
+echo "==> Sauvegarde des fichiers macros"
+echo "##########i#######################"
 cd $REP_COURANT
 cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}
 echo "cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}"
 cd /opt/Analog_Bridge/
-ls *.txt > liste_fic.txt
-for i in liste_fic.txt
+ls *.txt > $REP_COURANT/liste_fic.txt
+for i in $REP_COURANT/liste_fic.txt
 do
  echo "Sauvegarde $i ..."
  cp -rf /opt/Analog_Bridge/$i /opt/Analog_Bridge/$i_${DATE}
@@ -145,14 +145,14 @@ done
 
 
 echo ""
-echo "##############################################"
-echo "==> Copie des fichiers macros de ${INDICATIF}"
-echo "##########i###################################"
+echo "#############################"
+echo "==> Copie des fichiers macros"
+echo "##########i##################"
 cd $REP_COURANT
-cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvsm.macro /opt/Analog_Bridge
-echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvsm.macro /opt/Analog_Bridge"
-cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge
-echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge"
+cp -rf ./Fichiers_Ini_Ref/dvsm.macro /opt/Analog_Bridge
+echo "cp -rf ./Fichiers_Ini_Ref/dvsm.macro /opt/Analog_Bridge"
+cp -rf ./Fichiers_Ini_Ref/*.txt /opt/Analog_Bridge
+echo "cp -rf ./Fichiers_Ini_Ref/*.txt /opt/Analog_Bridge"
 
 
 echo ""
