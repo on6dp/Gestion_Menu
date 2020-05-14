@@ -177,7 +177,7 @@ do
   sed -i -e "s/idnxdn/${IDNXDN}/g" "$file"
   sed -i -e "s/usrp_port/${USRP}/g" "$file"
   sed -i -e "s/master_ip_bm/${MASTER_IP_BM}/g" "$file"
-  if [ ${MASTER_IP_BM} = "109.15.57.11" ]; then
+  if [ ${MASTER_IP_BM} = "51.178.86.131" ]; then
         sed -i -e "s/Port=62031/Port=${PORT_HB}/g" "$file"
         sed -i -e "s/Password=passw0rd/Password=PASSWORD/g" "$file"
   fi
