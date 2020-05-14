@@ -1,0 +1,9 @@
+-----Start of File-----
+*00,Main Menu
+*101,Mode - YSF
+*102,Reflecteur - YSF-France
+*103,Reflecteur - YSF-FraWide
+*104,Reflecteur - YSF-Test
+*105,Modulation - YSF W
+*106,Modulation - YSF N
+-----End of File-----

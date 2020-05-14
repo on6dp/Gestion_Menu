@@ -1,0 +1,9 @@
+-----Start of File-----
+*00,Main Menu
+*501,Tx AUDIO_USE_GAIN 0.45
+*502,Tx AUDIO_USE_GAIN 0.25
+*503,Tx AUDIO_Use_GAIN 0.15
+*504,Rx AUDIO_USE_GAIN 2.1
+*505,Rx AUDIO_USE_GAIN 4.1
+*506,Rx AUDIO_USE_GAIN 6.1
+-----End of File-----

@@ -1,0 +1,9 @@
+-----Start of File-----
+*100,===> YSF
+*200,===> NXDN 
+*300,===> P25
+*400,===> DSTAR
+*500,===> DMR N/A
+*900,===> Audio Gain Parametres
+*9876,===> Parrot
+-----End of File-----

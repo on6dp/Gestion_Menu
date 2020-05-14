@@ -1,0 +1,7 @@
+-----Start of File-----
+*00,Main Menu
+*401,Mode - DSTAR
+*402,DCS933C
+*403,DCS933T
+*404,DCS933Y
+-----End of File-----

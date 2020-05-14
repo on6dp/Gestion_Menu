@@ -1,0 +1,8 @@
+-----Start of File-----
+*00,Main Menu
+*201,Mode - NXDN
+*202,Reflecteur - NXDN France
+*203,N/A
+*204,N/A
+*205,N/A
+-----End of File-----
