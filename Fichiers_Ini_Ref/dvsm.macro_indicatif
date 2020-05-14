@@ -6,32 +6,56 @@
 
 [MACROS]
 ; Example: When a DVSM user selects the DMR mode, AB will look for the mode below and execute the script and pass the parameter.
-; In this case, AB will execute the script "/opt/MMDVM_Bridge/dvswitch.sh" and pass the prarmeters of "mode DMR" to the script. 
+; In this case, AB will execute the script "/opt/Analog_Bridge/dvswitch.sh" and pass the prarmeters of "mode DMR" to the script. 
 
-DMR =   /opt/MMDVM_Bridge_indicatif/dvswitch.sh mode DMR
-DSTAR = /opt/MMDVM_Bridge_indicatif/dvswitch.sh mode DSTAR
-NXDN =  /opt/MMDVM_Bridge_indicatif/dvswitch.sh mode NXDN
-P25 =   /opt/MMDVM_Bridge_indicatif/dvswitch.sh mode P25
-YSF =   /opt/MMDVM_Bridge_indicatif/dvswitch.sh mode YSF
+DMR =   /opt/MMDVM_Bridge/dvswitch.sh mode DMR
+DSTAR = /opt/MMDVM_Bridge/dvswitch.sh mode DSTAR
+NXDN =  /opt/MMDVM_Bridge/dvswitch.sh mode NXDN
+P25 =   /opt/MMDVM_Bridge/dvswitch.sh mode P25
+YSF =   /opt/MMDVM_Bridge/dvswitch.sh mode YSF
 
 ; Ask AB to pull fresh data files and send to DVSM/UC
-dbupdate = /opt/MMDVM_Bridge_indicatif/dvswitch.sh collectProcessPushDataFiles
+dbupdate = /opt/MMDVM_Bridge/dvswitch.sh collectProcessPushDataFiles
 
 ; Example TG / Reflector Macro
-9876 =  /opt/MMDVM_Bridge_indicatif/parrot.sh
+9876 =  /opt/Analog_Bridge/parrot.sh
 
 ; Ajout F1PTL Redemarrage du RaspBerry
-; 6666 = sudo reboot
-
-; Ajout F1PTL VW et DN en YSF
-AB10 = /opt/MMDVM_Bridge_indicatif/dvswitch.sh ambemode YSFW
-AB20 = /opt/MMDVM_Bridge_indicatif/dvswitch.sh ambemode YSFN
+6666 = sudo reboot
 
 ; Ajout F1PTL Bascule BM vers HBlink3
-9200 = /opt/MMDVM_Bridge_indicatif/dvs_bm_hblink.sh
-9201 = /opt/MMDVM_Bridge_indicatif/dvs_hblink_bm.sh
+9200 = /opt/Analog_Bridge/dvs_bm_hblink.sh
+9201 = /opt/Analog_Bridge/dvs_hblink_bm.sh
 
-; Ajout F1PTL Affichage Connexion
-9500 = /opt/MMDVM_Bridge_indicatif/dvs_info.sh
+; Ajout F1PTL Index Macro 00
+00 = /opt/MMDVM_Bridge/dvswitch.sh macro index.txt
 
+; Ajout F1PTL Index Macro 100
+100 = /opt/MMDVM_Bridge/dvswitch.sh macro ysf.txt
+101 = /opt/MMDVM_Bridge/dvswitch.sh mode YSF
+102 = /opt/MMDVM_Bridge/dvswitch.sh tune 87.98.132.205:42000
+103 = /opt/MMDVM_Bridge/dvswitch.sh tune 5.135.190.184:42010
+104 = /opt/MMDVM_Bridge/dvswitch.sh tune 51.75.133.61:42000
+105 = /opt/MMDVM_Bridge/dvswitch.sh ambemode YSFW
+106 = /opt/MMDVM_Bridge/dvswitch.sh ambemode YSFN
+
+; Ajout F1PTL Index Macro 200
+200 = /opt/MMDVM_Bridge/dvswitch.sh macro nxdn.txt
+201 = /opt/MMDVM_Bridge/dvswitch.sh mode NXDN
+202 = /opt/MMDVM_Bridge/dvswitch.sh tune 65208
+
+; Ajout F1PTL Index Macro 300
+300 = /opt/MMDVM_Bridge/dvswitch.sh macro p25.txt
+301 = /opt/MMDVM_Bridge/dvswitch.sh mode P25
+302 = /opt/MMDVM_Bridge/dvswitch.sh tune 10208
+
+; Ajout F1PTL Index Macro 400
+400 = /opt/MMDVM_Bridge/dvswitch.sh macro dstar.txt
+401 = /opt/MMDVM_Bridge/dvswitch.sh mode DSTAR
+402 = /opt/MMDVM_Bridge/dvswitch.sh tune DCS933CL
+403 = /opt/MMDVM_Bridge/dvswitch.sh tune DCS933TL
+404 = /opt/MMDVM_Bridge/dvswitch.sh tune DCS933YL
+
+; Ajout F1PTL reglage Audio 500
+900 = /opt/MMDVM_Bridge/dvswitch.sh macro audio.txt
 
