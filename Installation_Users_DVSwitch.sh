@@ -1,13 +1,13 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 05/05/2020
+# Creation le 15/05/2020
 # Par F1PTL Bruno
 #===================================
 #####################################
 # Variables #
 #############
-Version="1.3"
+Version="1.4"
 REP_COURANT=`pwd`
 FIC_REF="Fichiers_Ini_Ref"
 FIC_REF_TAR="Fichiers_Ini_Ref.tar"
