@@ -10,6 +10,7 @@
 #############
 REP_COURANT=`pwd`
 DATE=`date +%Y%m%d_%H:%M:%S`
+Version="2.0"
 #####################################
 if [ $(id -u) -ne 0 ]
         then
@@ -17,8 +18,11 @@ if [ $(id -u) -ne 0 ]
         echo "==> Lancement avec les droits root"
         exit 1
 fi
-
-whiptail --title "F1PTL UPGRADE Version 1.0" --msgbox "Mise a jour des logiciels : \n/opt/Analog_Bridge \n/opt/MMDVM_Bridge \n\nSauvegarde et copie des nouveaux fichiers Macros \n\n Appuyer sur la touche Entree pour continuer." 13 55
+if (whiptail --title "F1PTL UPGRADE Version ${Version}" --yesno "Mise a jour des logiciels : \n/opt/Analog_Bridge \n/opt/MMDVM_Bridge.\n\n      Sauvegarde et copie des nouveaux fichiers Macros ..." 13 55); then
+    	echo "==> vous avez valider votre choix"
+	else
+    	echo "==> vous avez annule"; exit 1
+fi
 
 clear
 echo "========================================================================"
