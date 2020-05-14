@@ -132,7 +132,7 @@ echo "==> Sauvegarde des fichiers macros"
 echo "##########i#######################"
 cd $REP_COURANT
 cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}
-echo "cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}"
+echo "Sauvegarde dvsm.macro ..."
 cd /opt/Analog_Bridge
 for i in *.txt
 do
