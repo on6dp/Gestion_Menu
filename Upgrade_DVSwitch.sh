@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 #===================================
-# Creation le 11/05/2020
+# Creation le 15/05/2020
 # Par F1PTL Bruno
-# Version 1.2
+# Version 1.3
 #===================================
 #####################################
 # Variables #
@@ -18,7 +18,7 @@ if [ $(id -u) -ne 0 ]
         exit 1
 fi
 
-whiptail --title "F1PTL UPGRADE Version 1.0" --msgbox "Mise a jour des logiciels : \n/opt/Analog_Bridge \n/opt/MMDVM_Bridge \n\n Appuyer sur la touche Entree pour continuer." 13 55
+whiptail --title "F1PTL UPGRADE Version 1.0" --msgbox "Mise a jour des logiciels : \n/opt/Analog_Bridge \n/opt/MMDVM_Bridge \nSauvegarde et copie des fichiers Macros \n\n Appuyer sur la touche Entree pour continuer." 13 55
 
 clear
 echo "========================================================================"
@@ -124,6 +124,34 @@ echo "==> Deplacement du fichier dvswitch.sh"
 echo "#################################################"
 cp -rf /usr/src/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge
 echo "cp -rf /usr/src/MMDVM_Bridge/dvswitch.sh /opt/Analog_Bridge"
+
+
+echo ""
+echo "###############################################"
+echo "==> Sauvegarde des fichiers macros de ${INDICATIF}"
+echo "##########i####################################"
+cd $REP_COURANT
+cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}
+echo "cp -rf /opt/Analog_Bridge/dvsm.macro /opt/Analog_Bridge/dvsm.macro_${DATE}"
+cd /opt/Analog_Bridge/
+ls *.txt > liste_fic.txt
+for i in liste_fic.txt
+do
+ echo "Sauvegarde $i ..."
+ cp -rf /opt/Analog_Bridge/$i /opt/Analog_Bridge/$i_${DATE}
+ echo ""
+done
+
+
+echo ""
+echo "##############################################"
+echo "==> Copie des fichiers macros de ${INDICATIF}"
+echo "##########i###################################"
+cd $REP_COURANT
+cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvsm.macro /opt/Analog_Bridge
+echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/dvsm.macro /opt/Analog_Bridge"
+cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge
+echo "cp -rf ./Fichiers_Ini_Ref_${INDICATIF}/*.txt /opt/Analog_Bridge"
 
 
 echo ""
