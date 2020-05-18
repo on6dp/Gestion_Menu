@@ -20,6 +20,7 @@ Address = 127.0.0.1             ; Address to send AMBE TLV frames to (export)
 TXPort = 31TXG0                  ; Port to send AMBE TLV frames to (export)
 RXPort = 31TXG3                  ; Port to listen on (import)
 Slot = 2                        ; Export slot
+; ExportTG = 0                    ; Which TG to export
 ; TalkerAlias = Serveur DMR DVSWITCH
 
 ; Configure the D-Star Partner
