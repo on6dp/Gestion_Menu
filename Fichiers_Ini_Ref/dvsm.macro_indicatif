@@ -34,8 +34,8 @@ dbupdate = /opt/MMDVM_Bridge/dvswitch.sh collectProcessPushDataFiles
 100 = /opt/MMDVM_Bridge/dvswitch.sh macro ysf.txt
 101 = /opt/MMDVM_Bridge/dvswitch.sh mode YSF
 102 = /opt/MMDVM_Bridge/dvswitch.sh tune m55.evxonline.net:42000
-103 = /opt/MMDVM_Bridge/dvswitch.sh tune ns3294400.ip-5-135-190.eu:42010
-104 = /opt/MMDVM_Bridge/dvswitch.sh tune 61.ip-51-75-133.eu:42000
+103 = /opt/MMDVM_Bridge/dvswitch.sh tune ns3294400.ovh.net:42010
+104 = /opt/MMDVM_Bridge/dvswitch.sh tune vps731279.ovh.net:42000
 105 = /opt/MMDVM_Bridge/dvswitch.sh ambemode YSFW
 106 = /opt/MMDVM_Bridge/dvswitch.sh ambemode YSFN
 
