@@ -33,9 +33,9 @@ dbupdate = /opt/MMDVM_Bridge/dvswitch.sh collectProcessPushDataFiles
 ; Ajout F1PTL Index Macro 100
 100 = /opt/MMDVM_Bridge/dvswitch.sh macro ysf.txt
 101 = /opt/MMDVM_Bridge/dvswitch.sh mode YSF
-102 = /opt/MMDVM_Bridge/dvswitch.sh tune 87.98.132.205:42000
-103 = /opt/MMDVM_Bridge/dvswitch.sh tune 5.135.190.184:42010
-104 = /opt/MMDVM_Bridge/dvswitch.sh tune 51.75.133.61:42000
+102 = /opt/MMDVM_Bridge/dvswitch.sh tune m55.evxonline.net:42000
+103 = /opt/MMDVM_Bridge/dvswitch.sh tune ns3294400.ip-5-135-190.eu:42010
+104 = /opt/MMDVM_Bridge/dvswitch.sh tune 61.ip-51-75-133.eu:42000
 105 = /opt/MMDVM_Bridge/dvswitch.sh ambemode YSFW
 106 = /opt/MMDVM_Bridge/dvswitch.sh ambemode YSFN
 
