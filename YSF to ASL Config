@@ -1,0 +1,97 @@
+YSF to ASL sample configuration
+
+MMDVM_Bridge.ini
+ 
+[System Fusion]
+Enable=1
+ 
+[System Fusion Network]
+Enable=1
+LocalAddress=0
+LocalPort=3200
+GatewayAddress= point to your YSF Reflector
+GatewayPort=42000  <<<  YSF Reflector port
+Debug=0
+ 
+ 
+DVSwitch.ini
+ 
+[YSF]
+address = 127.0.0.1             
+txPort = 35100                
+rxPort = 35103                  
+txWidePort = 35105
+fallbackID = your ID           
+exportTG = 9                 
+slot = 2                     
+RemotePort = 6073
+ 
+ Analog_Bridge.ini
+ 
+; General vocoder setup information
+decoderFallBack = true                 
+useEmulator = true                     
+emulatorAddress = 127.0.0.1:2470        
+ 
+pcmPort = 2222
+ 
+ 
+[AMBE_AUDIO]
+address = 127.0.0.1                     
+txPort = 35103                         
+rxPort = 35100                         
+ambeMode = YSF                          
+minTxTimeMS = 2500                      
+ 
+ 
+gatewayDmrId = your id                  
+repeaterID = your id plus 2                 
+txTg = 9                           
+txTs = 2                               
+colorCode = 1                          
+ 
+ 
+[USRP]
+address = 127.0.0.1                     
+txPort = 32001                         
+rxPort = 34001                          
+usrpAudio = AUDIO_USE_GAIN              
+usrpGain = 3.10                        
+usrpAGC = -20,10,100                    
+tlvAudio = AUDIO_USE_GAIN                  
+tlvGain = 0.50                         
+ 
+ALLSTARLINK Private Node
+ 
+rpt.conf
+ 
+[1999]
+rxchannel = USRP/127.0.0.1:34001:32001  ; Use the USRP channel driver. Must be enabled in modules.conf
+; 127.0.0.1 = IP of the target application
+; 34001 = UDP port the target application is listening on
+; 32001 = UDP port ASL is listening on
+ 
+duplex = 0 ; 0 = Half duplex with no telemetry tones or hang time. Ah, but Allison STILL talks!
+ 
+hangtime = 0 ; squelch tail hang time 0
+althangtime = 0 ; longer squelch tail hang time 0
+ 
+holdofftelem = 1 ; Hold off all telemetry when signal is present on receiver or from connected nodes
+; except when an ID needs to be done and there is a signal coming from a connected node.
+ 
+telemdefault = 0 ; 0 = telemetry output off. Don't send Allison to DMR !!!!!!!!!!!!!!!!! Trust me.
+ 
+telemdynamic = 0 ; 0 = disallow users to change the local telemetry setting with a COP command,
+ 
+linktolink = no ; disables forcing physical half-duplex operation of main repeater while
+; still keeping half-duplex semantics (optional)
+ 
+nounkeyct = 1 ; Set to a 1 to eliminate courtesy tones and associated delays.
+ 
+totime = 180000 ; transmit time-out time (in ms) (optional, default 3 minutes 180000 ms)
+ 
+; idrecording = |ie ; id recording or morse string see http://ohnosec.org/drupal/node/87
+; idtalkover = |ie ; Talkover ID (optional) default is none see http://ohnosec.org/drupal/node/129
+ 
+ 
+ 
